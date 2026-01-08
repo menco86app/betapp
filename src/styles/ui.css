@@ -1,0 +1,507 @@
+/*ui.css*/
+.card {
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;           /* ⬅️ CENTRATA */
+  background: white;
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+
+
+
+/* =========================
+   CARD COMMENTO & FORM
+========================= */
+
+.card-comment,
+.card-form {
+  max-width: 490px;
+  width: 100%;
+  margin: 0 auto;     /* ⬅️ CENTRATE */
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.tab {
+  background: rgba(255,255,255,0.1);
+  color: #e5e7eb;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: white;
+  color: #111827;
+}
+
+
+.badge {
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 999px;
+  color: white;
+}
+
+.badge.base {
+  background: #2563eb;
+}
+
+.badge.prudente {
+  background: #16a34a;
+}
+
+.badge.aggressiva {
+  background: #dc2626;
+}
+
+.badge.check {
+  background: #ecdd0c;
+}
+
+
+.accordion {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff0;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  background: #ffffff5d;
+  cursor: pointer;
+}
+
+.accordion-header:hover {
+  background: #eef2f7;
+}
+
+.accordion-content {
+  padding: 12px;
+}
+.match-switcher {
+  position: relative;
+  display: inline-block;
+}
+
+.match-title {
+  background: none;
+  border: none;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.match-title .arrow {
+  font-size: 12px;
+  transition: transform .2s ease;
+}
+
+.match-title .arrow.open {
+  transform: rotate(180deg);
+}
+
+.match-title.placeholder {
+  color: #070707;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.match-dropdown {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  z-index: 20;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+  max-height: 300px;
+  overflow-y: auto;
+  min-width: 260px;
+}
+
+.match-option {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.match-option:hover {
+  background: #f3f4f6;
+}
+
+.match-option.active {
+  background: #e5e7eb;
+  font-weight: 600;
+}
+.duel-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* HEADER */
+.duel-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px;
+  margin-bottom: 12px;
+
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 14px;
+
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.label-sub {
+  font-size: 12px;
+  opacity: 0.75;
+  text-align: center;
+}
+
+.duel-header span {
+  flex: 1;
+  text-align: center;
+}
+
+/* NUMERI SOPRA */
+.duel-values {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 15px;
+}
+.duel-values span {
+ flex: 1;
+ text-align: center;
+ color: #ffffff;
+}
+
+/* BLOCCO BARRE */
+.stat-duel {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 14px;
+  padding: 8px 20px;
+  margin-bottom: 10px;
+}
+
+/* ESCLUDI FORM */
+.form-card .stat-duel,
+.form-card {
+  background: white;
+}
+
+.duel-bars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* BARRA BASE */
+.bar {
+  flex: 1;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  position: relative;
+}
+
+.bar .fill {
+  height: 100%;
+  border-radius: 999px;
+  background: #b82116;
+}
+
+.bar.better .fill {
+  background: #22c55e;
+}
+
+
+/* SINISTRA */
+.bar.left .fill {
+  margin-left: auto;
+}
+
+/* DESTRA */
+.bar.right .fill {
+  margin-right: auto;
+}
+
+/* PALLINO */
+.bar .dot {
+  position: absolute;
+  top: -4px;
+  width: 14px;
+  height: 14px;
+  background: #111827;
+  border-radius: 50%;
+}
+
+.bar.left .dot {
+  right: 0;
+}
+
+.bar.right .dot {
+  left: 0;
+}
+
+/* LABEL CENTRALE */
+.duel-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* SOLO "FORMA (ultime 6)" */
+.form-card .duel-label {
+  color: #000000;
+  font-weight: 600;
+}
+
+.form-box {
+  margin-top: 14px;
+  font-size: 12px;
+  color: #374151;
+}
+
+.form-row {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.form-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.form-dot.W { background: #16a34a; }
+.form-dot.L { background: #dc2626; }
+.form-dot.D { background: #6b7280; }
+
+.form-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+.stat-duel {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.form-card h4 {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.form-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.form-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.form-dot.W { background: #16a34a; }
+.form-dot.L { background: #dc2626; }
+.form-dot.D { background: #facc15; color: #000; }
+
+.form-info {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.bar.better .fill,
+.bar.better .dot {
+  background: #16a34a;
+}
+
+.mini-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.over-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 40px;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.over-bar {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.over-fill {
+  height: 100%;
+  background: #9ca3af;
+}
+
+.over-fill.good {
+  background: #16a34a;
+}
+/* SOLO tab tutte le scommesse */
+.content-bets {
+  background: rgba(17, 24, 39, 0.85); /* grigio scuro trasparente */
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* testo leggibile */
+.content-bets,
+.content-bets .bet-info,
+.content-bets .bet-ev {
+  color: #000000;
+}
+.schedina-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.schedina-row:last-child {
+  border-bottom: none;
+}
+
+.schedina-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.schedina-match {
+  font-weight: 600;
+}
+
+.schedina-market {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.schedina-market-group {
+  font-size: 0.75em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #6b7280; /* grigio elegante */
+  margin-top: 2px;
+}
+
+.schedina-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.schedina-remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+/* CENTRATURE */
+.centered {
+  text-align: center;
+}
+
+/* HEADER */
+.mini-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.mini-title {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+/* CESTINO */
+.mini-clear {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mini-clear-text {
+  font-size: 0.75em;
+  color: #666;
+}
+
+.mini-clear:hover {
+  opacity: 1;
+}
+
+/* CTA */
+.mini-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.mini-go {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+}
