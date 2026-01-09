@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BetApp</string>
+    <string name="title_activity_main">BetApp</string>
+    <string name="package_name">com.menco86.betapp</string>
+    <string name="custom_url_scheme">com.menco86.betapp</string>
+</resources>

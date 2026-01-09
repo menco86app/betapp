@@ -35,6 +35,7 @@ export default function Home() {
 
 return (
   <div className="app-container">
+  
 
     {/* HEADER */}
     <div className="page-header">

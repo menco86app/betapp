@@ -1,0 +1,9 @@
+{
+  "appId": "com.menco86.betapp",
+  "appName": "BetApp",
+  "webDir": "dist",
+  "server": {
+    "url": "https://betapp-nine.vercel.app",
+    "cleartext": false
+  }
+}

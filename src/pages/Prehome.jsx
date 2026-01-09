@@ -11,6 +11,7 @@ export default function PreHome() {
   return (
     <div className="prehome">
 
+
       {/* HEADER */}
       <header className="prehome-header">
         <div className="logo">⚽ MencoBet</div>
@@ -20,6 +21,15 @@ export default function PreHome() {
       </header>
 
       {/* HERO */}
+      <div style={{ 
+  background: "red", 
+  color: "white", 
+  padding: "10px", 
+  fontWeight: "bold" 
+}}>
+  DEBUG BUILD – API_URL: {import.meta.env.VITE_API_URL || "UNDEFINED"} <br />
+  DEBUG BUILD – API_KEY: {import.meta.env.VITE_API_KEY || "UNDEFINED"}
+</div>
       <section className="hero">
         <h1>Analisi calcio. Value bet. Decisioni migliori.</h1>
         <p>
